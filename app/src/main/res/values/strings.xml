@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PasswordValut</string>
+    <string name="itemView_username">userName</string>
+    <string name="username">UserName</string>
+    <string name="password">password</string>
+    <string name="btn_submit">Submit</string>
+</resources>
