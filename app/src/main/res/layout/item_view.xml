@@ -8,10 +8,12 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="false"
         app:cardElevation="5dp"
-        app:cardUseCompatPadding="true"
-        android:focusable="true">
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,8 +25,10 @@
                 android:id="@+id/userName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:text="@string/itemView_username"
                 android:textSize="20sp"
+                android:textColor="@android:color/black"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -32,12 +36,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
+                android:textColor="@android:color/black"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                app:boxStrokeWidth="2dp"
                 app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/view_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
                     android:inputType="textPassword" />
 
             </com.google.android.material.textfield.TextInputLayout>

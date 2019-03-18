@@ -38,8 +38,8 @@ public class editItemActivity extends AppCompatActivity {
         deletelbtn = findViewById(R.id.deleteItem);
         uname = findViewById(R.id.edit_username);
         pass = findViewById(R.id.edit_password);
-
         builder1 = new AlertDialog.Builder(editItemActivity.this);
+
         ids = Integer.parseInt(getIntent().getStringExtra("id"));
         Log.d("ids_error", Integer.toString(ids));
         try {
@@ -48,13 +48,8 @@ public class editItemActivity extends AppCompatActivity {
             res.moveToFirst();
             username = res.getString(res.getColumnIndex("uname"));
             password = res.getString(res.getColumnIndex("pass"));
-
             uname.setText(username);
             pass.setText(password);
-            //alertDailog
-
-            ids = Integer.parseInt(getIntent().getStringExtra("id"));
-            Toast.makeText(this, Integer.toString(ids), Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Log.d("ids", e.toString());
         }
@@ -64,10 +59,7 @@ public class editItemActivity extends AppCompatActivity {
                 DBHelper helper = new DBHelper(getApplicationContext());
                 String u1 = uname.getText().toString();
                 String p1 = pass.getText().toString();
-                // Toast.makeText(getApplicationContext(), ids+"+"+u1+"+"+p1, Toast.LENGTH_SHORT).show();
                 helper.updatePasswordVault(ids, u1, p1);
-                Intent intent = new Intent(editItemActivity.this, MainActivity.class);
-                startActivity(intent);
                 finish();
                 Toast.makeText(editItemActivity.this, "Data Updated", Toast.LENGTH_SHORT).show();
 
@@ -89,8 +81,6 @@ public class editItemActivity extends AppCompatActivity {
                                 dialog.cancel();
                                 DBHelper helper = new DBHelper(getApplicationContext());
                                 helper.deletePassworsVault(ids);
-                                Intent intent = new Intent(editItemActivity.this, MainActivity.class);
-                                startActivity(intent);
                                 finish();
                                 Toast.makeText(editItemActivity.this, "Data Deleted ", Toast.LENGTH_SHORT).show();
                             }

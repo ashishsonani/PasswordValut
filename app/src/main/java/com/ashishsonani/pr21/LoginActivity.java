@@ -34,9 +34,8 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
-            Toast.makeText(this, "Success: Verified user's identity", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "Failure: Unable to verify user's identity", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Unable to verify", Toast.LENGTH_SHORT).show();
         }
     }
 }

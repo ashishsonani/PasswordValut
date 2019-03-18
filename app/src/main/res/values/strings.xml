@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PasswordValut</string>
+    <string name="app_name">PasswordVault</string>
     <string name="itemView_username">userName</string>
     <string name="username">UserName</string>
     <string name="password">password</string>
